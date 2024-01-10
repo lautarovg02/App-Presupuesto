@@ -16,6 +16,7 @@ export class FormularioComponent {
 
   inputDescripcion:string;
   inputValor:number;
+  valueSelect:string;
 
   agregarIngreso(){
     let nuevoIngreso = new Ingreso(this.inputDescripcion,this.inputValor);
@@ -29,6 +30,10 @@ export class FormularioComponent {
     this.egresoService.agregarEgreso(nuevoEgreso);
     this.inputDescripcion = " ";
     this.inputValor = 0;
+  }
+
+  ingresoEstaSeleccionado(){
+    alert(this.valueSelect = 'ing' ? "ing" : "false");
   }
 
 }
