@@ -11,7 +11,6 @@ import { Ingreso } from '../ingreso/ingreso.model';
 })
 
 export class FormularioComponent {
-  
   constructor(private ingresoService: IngresoService, private egresoService: EgresoService){}
 
   inputDescripcion:string;
@@ -21,19 +20,27 @@ export class FormularioComponent {
   agregarIngreso(){
     let nuevoIngreso = new Ingreso(this.inputDescripcion,this.inputValor);
     this.ingresoService.agregarIngreso(nuevoIngreso);
-    this.inputDescripcion = " ";
-    this.inputValor = 0;
   }
 
   agregarEgreso(){
     let nuevoEgreso = new Egreso(this.inputDescripcion,this.inputValor);
     this.egresoService.agregarEgreso(nuevoEgreso);
-    this.inputDescripcion = " ";
-    this.inputValor = 0;
   }
 
   ingresoEstaSeleccionado(){
     alert(this.valueSelect = 'ing' ? "ing" : "false");
+  }
+
+  tipoOperacion(event:Event){
+  
+  }
+
+  agregarValor() {
+    if(this.valueSelect == "operacionIngreso") this.agregarIngreso()
+    else this.agregarEgreso();
+
+    this.inputDescripcion = " ";
+    this.inputValor = 0;
   }
 
 }
