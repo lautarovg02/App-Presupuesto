@@ -33,8 +33,11 @@ body {
     padding-top: 150px;
     padding-bottom: 100px;
     color: #fff;
-    background:  #7b4397;
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    background:  #001219;
+    /* background-image:url('../src/assets/7.webp') ;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh; */
+    
 }
 
 .presupuesto {
@@ -65,6 +68,16 @@ body {
 .presupuesto_egreso {
     padding: 12px;
     text-transform: uppercase;
+}
+
+
+.presupuesto_ingreso:hover,
+.presupuesto_egreso:hover{
+    border: 1.5px solid #fff;
+    position: relative;
+    transition: all 0.2s;
+    transform: scale(1.06);
+    
 }
 
 .presupuesto_ingreso {
@@ -256,7 +269,7 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
-
+.elemento:hover{         box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);}
 
 .no_pagado {
     background-color: #FFDAD9 !important;
