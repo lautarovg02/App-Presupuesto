@@ -37,7 +37,10 @@ export class FormularioComponent {
 
   agregarValor() {
     if(this.valueSelect == "operacionIngreso") this.agregarIngreso()
-    else this.agregarEgreso();
+    else{
+        console.log(this.ingresoService.ingresoTotal)
+        this.agregarEgreso();
+    }
 
     this.inputDescripcion = " ";
     this.inputValor = 0;

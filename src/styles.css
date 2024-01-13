@@ -33,10 +33,8 @@ body {
     padding-top: 150px;
     padding-bottom: 100px;
     color: #fff;
-    background:  #001219;
-    /* background-image:url('../src/assets/7.webp') ;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh; */
+    background:  #7b4397;
+    background:url(../src/assets/bg-pattern.png), linear-gradient(to right, #006466, #4d194d);
     
 }
 
